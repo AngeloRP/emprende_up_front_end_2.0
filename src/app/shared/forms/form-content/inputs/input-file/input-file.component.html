@@ -1,0 +1,60 @@
+<ng-container *ngIf="data.isRequired === true">
+    <ng-container *ngIf="data.hasPlaceholder === true">
+        <ng-container *ngIf="options.pattern">
+            <ng-container *ngIf="options.title">
+            </ng-container>
+            <ng-container *ngIf="!options.title">
+            </ng-container>
+        </ng-container>
+        <ng-container *ngIf="!options.pattern">
+            <ng-container *ngIf="options.title">
+            </ng-container>
+            <ng-container *ngIf="!options.title">
+            </ng-container>
+        </ng-container>
+    </ng-container>
+    <ng-container *ngIf="data.hasPlaceholder === false">
+        <ng-container *ngIf="options.pattern">
+            <ng-container *ngIf="options.title">
+            </ng-container>
+            <ng-container *ngIf="!options.title">
+            </ng-container>
+        </ng-container>
+        <ng-container *ngIf="!options.pattern">
+            <ng-container *ngIf="options.title">
+            </ng-container>
+            <ng-container *ngIf="!options.title">
+            </ng-container>
+        </ng-container>
+    </ng-container>
+</ng-container>
+<ng-container *ngIf="data.isRequired === false">
+    <ng-container *ngIf="data.hasPlaceholder === true">
+        <ng-container *ngIf="options.pattern">
+            <ng-container *ngIf="options.title">
+            </ng-container>
+            <ng-container *ngIf="!options.title">
+            </ng-container>
+        </ng-container>
+        <ng-container *ngIf="!options.pattern">
+            <ng-container *ngIf="options.title">
+            </ng-container>
+            <ng-container *ngIf="!options.title">
+            </ng-container>
+        </ng-container>
+    </ng-container>
+    <ng-container *ngIf="data.hasPlaceholder === false">
+        <ng-container *ngIf="options.pattern">
+            <ng-container *ngIf="options.title">
+            </ng-container>
+            <ng-container *ngIf="!options.title">
+            </ng-container>
+        </ng-container>
+        <ng-container *ngIf="!options.pattern">
+            <ng-container *ngIf="options.title">
+            </ng-container>
+            <ng-container *ngIf="!options.title">
+            </ng-container>
+        </ng-container>
+    </ng-container>
+</ng-container>

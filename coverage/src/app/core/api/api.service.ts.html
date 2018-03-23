@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/app/core/api/api.service.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\..\..\index.html">All files</a> / <a href="index.html">src/app/core/api</a> api.service.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">37.84% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>14/37</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">16.67% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>6/36</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">33.33% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/3</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">36.67% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>11/30</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Injectable } from '@angular/core';
+import { Http, Response, Headers } from '@angular/http';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
+import { config_server } from './config';
+import { EndpointService } from './endpoint.service';
+import { NotificationService } from 'app/shared/utils/notification.service';
+import * as  conexion_back from 'assets/api/back/url.json'
+&nbsp;
+@Injectable()
+export class ApiService extends EndpointService {
+&nbsp;
+<span class="fstat-no" title="function not covered" >  constructor(public <span class="cstat-no" title="statement not covered" ></span>http: Http<span class="branch-1 cbranch-no" title="branch not covered" >,</span> public <span class="cstat-no" title="statement not covered" >notificationService?: </span>NotificationService<span class="branch-2 cbranch-no" title="branch not covered" >)</span> {</span>
+<span class="cstat-no" title="statement not covered" >    super(http, conexion_back.url, config_server.headers);</span>
+<span class="cstat-no" title="statement not covered" >    this.webAddress.addHeader({</span>
+      name: 'USER-ID',
+      value: window.localStorage.getItem('user-id')
+    });
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  public fillApiService(</span>
+<span class="cstat-no" title="statement not covered" >    url: string = null,</span>
+<span class="cstat-no" title="statement not covered" >    headers: { name: string, value: any }[] = null,</span>
+<span class="cstat-no" title="statement not covered" >    headersLocalStorage: string[] = null,</span>
+<span class="cstat-no" title="statement not covered" >    headersHttp: Headers = null)</span> {
+<span class="cstat-no" title="statement not covered" >    if (url != null &amp;&amp; url !== undefined) {</span>
+<span class="cstat-no" title="statement not covered" >      this.webAddress.addUrl(url);</span>
+    }
+<span class="cstat-no" title="statement not covered" >    if (headers != null &amp;&amp; headers !== undefined) {</span>
+<span class="cstat-no" title="statement not covered" >      for (const header<span class="cstat-no" title="statement not covered" > of headers) {</span></span>
+<span class="cstat-no" title="statement not covered" >        this.webAddress.addHeader(header);</span>
+      }
+    }
+<span class="cstat-no" title="statement not covered" >    if (headersLocalStorage != null &amp;&amp; headersLocalStorage !== undefined) {</span>
+<span class="cstat-no" title="statement not covered" >      for (const header<span class="cstat-no" title="statement not covered" > of headersLocalStorage) {</span></span>
+        let name = <span class="cstat-no" title="statement not covered" >header;</span>
+<span class="cstat-no" title="statement not covered" >        if (header === 'start-up-id-table') { <span class="cstat-no" title="statement not covered" >name = 'start-up-id'; </span>}</span>
+<span class="cstat-no" title="statement not covered" >        this.webAddress.addHeader({</span>
+          name: name.toUpperCase(),
+          value: window.localStorage.getItem(header)
+        });
+      }
+    }
+<span class="cstat-no" title="statement not covered" >    if (headersHttp != null &amp;&amp; headersHttp !== undefined) {</span>
+<span class="cstat-no" title="statement not covered" >      this.webAddress.headers = headersHttp;</span>
+    }
+    // console.log('Headers Keys:' + this.webAddress.getHeaderKeys());
+    // console.log('Headers Actuales:' + this.webAddress.getHeaderValues());
+  }
+&nbsp;
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Mar 20 2018 10:13:14 GMT-0500 (Hora est. Pacífico, Sudamérica)
+</div>
+</div>
+<script src="..\..\..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\..\..\sorter.js"></script>
+</body>
+</html>

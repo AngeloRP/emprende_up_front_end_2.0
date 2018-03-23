@@ -1,0 +1,12 @@
+<label class="input">
+  <label *ngIf="data.hasLabel">
+    {{data.placeholder}}
+  </label>
+  <app-icono *ngIf="imagen" [imagen]="imagen">
+  </app-icono>
+  <app-input-content
+  [data]="data"
+  [hasMasked]="hasMasked"
+  ></app-input-content>
+  
+</label>
