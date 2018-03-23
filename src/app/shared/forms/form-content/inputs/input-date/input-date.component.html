@@ -1,60 +1,8 @@
 <ng-container *ngIf="data.isRequired === true">
-    <ng-container *ngIf="data.hasPlaceholder === true">
-        <ng-container *ngIf="options.pattern">
-            <ng-container *ngIf="options.title">
-            </ng-container>
-            <ng-container *ngIf="!options.title">
-            </ng-container>
-        </ng-container>
-        <ng-container *ngIf="!options.pattern">
-            <ng-container *ngIf="options.title">
-            </ng-container>
-            <ng-container *ngIf="!options.title">
-            </ng-container>
-        </ng-container>
-    </ng-container>
-    <ng-container *ngIf="data.hasPlaceholder === false">
-        <ng-container *ngIf="options.pattern">
-            <ng-container *ngIf="options.title">
-            </ng-container>
-            <ng-container *ngIf="!options.title">
-            </ng-container>
-        </ng-container>
-        <ng-container *ngIf="!options.pattern">
-            <ng-container *ngIf="options.title">
-            </ng-container>
-            <ng-container *ngIf="!options.title">
-            </ng-container>
-        </ng-container>
-    </ng-container>
+    <input type="text" id="{{data.id}}" name="{{data.id}}" [(ngModel)]="data.value" placeholder="{{data.placeholder}}" class="{{data.class}}"
+        title="{{options.title}}" [disabled]="!input.isSeteable" (input)="operation()" required>
 </ng-container>
 <ng-container *ngIf="data.isRequired === false">
-    <ng-container *ngIf="data.hasPlaceholder === true">
-        <ng-container *ngIf="options.pattern">
-            <ng-container *ngIf="options.title">
-            </ng-container>
-            <ng-container *ngIf="!options.title">
-            </ng-container>
-        </ng-container>
-        <ng-container *ngIf="!options.pattern">
-            <ng-container *ngIf="options.title">
-            </ng-container>
-            <ng-container *ngIf="!options.title">
-            </ng-container>
-        </ng-container>
-    </ng-container>
-    <ng-container *ngIf="data.hasPlaceholder === false">
-        <ng-container *ngIf="options.pattern">
-            <ng-container *ngIf="options.title">
-            </ng-container>
-            <ng-container *ngIf="!options.title">
-            </ng-container>
-        </ng-container>
-        <ng-container *ngIf="!options.pattern">
-            <ng-container *ngIf="options.title">
-            </ng-container>
-            <ng-container *ngIf="!options.title">
-            </ng-container>
-        </ng-container>
-    </ng-container>
+<input type="text" id="{{data.id}}" name="{{data.id}}" [(ngModel)]="data.value" placeholder="{{data.placeholder}}" class="{{data.class}}"
+    title="{{options.title}}" [disabled]="!input.isSeteable" (input)="operation()">
 </ng-container>
