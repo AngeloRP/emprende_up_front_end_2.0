@@ -70,7 +70,7 @@
     ],
     "radix": false,
     "semicolon": [
-      true
+      "always"
     ],
     "triple-equals": [
       true,

@@ -28,6 +28,9 @@ import { InputHiddenComponent } from './form-content/inputs/input-hidden/input-h
 import { InputComponent } from './form-content/inputs/input/input.component';
 import { IconoComponent } from './form-content/icono/icono.component';
 import { InputContentComponent } from './form-content/inputs/input-content/input-content.component';
+import { FieldsetComponent } from './form-content/fieldset/fieldset.component';
+import { HeaderComponent } from './form-content/header/header.component';
+import { FooterComponent } from './form-content/footer/footer.component';
 
 
 
@@ -55,14 +58,41 @@ import { InputContentComponent } from './form-content/inputs/input-content/input
     InputHiddenComponent,
     InputComponent,
     IconoComponent,
-    InputContentComponent
+    InputContentComponent,
+    FieldsetComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   exports: [
+    FormsModule,
     SmartadminValidationModule,
     SmartadminWizardsModule,
     ButtonEliminarComponent,
     ButtonAceptarComponent,
-    ButtonCancelarComponent  ]
+    ButtonCancelarComponent,
+    InputTextComponent,
+    InputDateComponent,
+    InputNumberComponent,
+    InputMillarComponent,
+    InputPhoneComponent,
+    InputPasswordComponent,
+    InputEmailComponent,
+    InputCheckboxComponent,
+    InputRadioButtonComponent,
+    SelectComunComponent,
+    SelectMultipleComponent,
+    SelectSearchComponent,
+    InputSubmitComponent,
+    InputResetComponent,
+    InputFileComponent,
+    InputHiddenComponent,
+    InputComponent,
+    IconoComponent,
+    InputContentComponent,
+    FieldsetComponent,
+    HeaderComponent,
+    FooterComponent
+  ]
 
 })
 export class SmartadminFormsModule {}

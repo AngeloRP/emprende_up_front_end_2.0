@@ -2,7 +2,6 @@ import { NgModule, ApplicationRef } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { FormsModule } from '@angular/forms';
 import { HttpClientModule  } from '@angular/common/http';
 
 /*
@@ -42,7 +41,6 @@ type StoreType = {
   imports: [ // import Angular's modules
     BrowserModule,
     BrowserAnimationsModule,
-    FormsModule,
     HttpClientModule,
     CoreModule,
     SmartadminLayoutModule,

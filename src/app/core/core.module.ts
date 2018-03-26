@@ -8,6 +8,7 @@ import {SoundService} from '../shared/sound/sound.service';
 
 import { throwIfAlreadyLoaded } from './guards/module-import-guard';
 import {TabsModule, ProgressbarModule, TooltipModule, BsDropdownModule, AlertModule} from 'ngx-bootstrap';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   imports: [
@@ -18,7 +19,7 @@ import {TabsModule, ProgressbarModule, TooltipModule, BsDropdownModule, AlertMod
     AlertModule.forRoot(),
     TabsModule.forRoot(),
   ],
-  declarations: [],
+  declarations: [LoginComponent],
   providers: [
     LayoutService,
     SoundService

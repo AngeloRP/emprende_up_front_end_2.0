@@ -21,27 +21,21 @@ import {SmartadminWidgetsModule} from './widgets/smartadmin-widgets.module';
 import {UtilsModule} from './utils/utils.module';
 import {SmartProgressbarModule} from './ui/smart-progressbar/smart-progressbar.module';
 import { SmartadminFormsModule } from './forms/smartadmin-forms.module';
+import { LoadingComponent } from './loading/loading.component';
 
 
 @NgModule({
   imports: [
-    CommonModule, FormsModule, HttpModule, RouterModule,
-
-
-
+    CommonModule, FormsModule, HttpModule, RouterModule
   ],
   declarations: [
-
+  LoadingComponent
   ],
   exports: [
+    LoadingComponent,
     CommonModule, FormsModule, HttpModule, RouterModule,
     ModalModule,
     ButtonsModule,
-    AlertModule,
-    TabsModule,
-    TooltipModule,
-    BsDropdownModule,
-    ProgressbarModule,
     PopoverModule,
     SmartadminLayoutModule,
     UtilsModule,

@@ -1,3 +1,5 @@
-<p>
-  button-cancelar works!
-</p>
+<button id="{{data.id}}" class="{{data.clase}}" (click)="hacerClick()">
+  <img *ngIf="data.hasImagen == true" src="{{data.contenido}}" >
+  <p *ngIf="data.hasImagen == false">{{data.contenido}}</p>
+</button>
+

@@ -1,0 +1,12 @@
+<section id="{{section.id}}" class="{{section.clase}}">
+  <!-- Se le puede agregar legend como si fuera un subtitulo -->
+  <app-input 
+  *ngFor="let input of section.inputs"
+  [data]="input.data"
+  [type]="input.type"
+  [options]="input.options"
+  [label]="input.label"
+  >
+  </app-input>
+
+</section>

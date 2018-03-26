@@ -1,7 +1,6 @@
 
 /**
  * @param isRequired verificar que el campo input sea requerido
- * @param hasLabel verifica que el campo input tenga un label en la parte izquierda si true
  * @param id id para identificar al input y poder manipularlo mediante jquery o css.
  * @param value valor seteado en el input
  * @param class clase css que se agregara al input
@@ -16,7 +15,6 @@
  */
 export interface InputInterface {
     isRequired: boolean | true;
-    hasLabel: boolean | true;
     hasPlaceholder: boolean | true;
     id: string;
     value: any;
