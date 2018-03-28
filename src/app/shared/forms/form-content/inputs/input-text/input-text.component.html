@@ -1,8 +1,8 @@
 <ng-container *ngIf="data.isRequired === true">
         <input type="text" id="{{data.id}}" name="{{data.id}}" [(ngModel)]="data.value" placeholder="{{data.placeholder}}" class="{{data.class}}"
-            title="{{options.title}}" [disabled]="!input.isSeteable" (input)="operation()" required>
+            title="{{options.title}}" [disabled]="!data.isSeteable" (input)="operation()" required>
 </ng-container>
 <ng-container *ngIf="data.isRequired === false">
     <input type="text" id="{{data.id}}" name="{{data.id}}" [(ngModel)]="data.value" placeholder="{{data.placeholder}}" class="{{data.class}}"
-        title="{{options.title}}" [disabled]="!input.isSeteable" (input)="operation()">
+        title="{{options.title}}" [disabled]="!data.isSeteable" (input)="operation()">
 </ng-container>

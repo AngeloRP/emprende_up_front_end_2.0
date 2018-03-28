@@ -16,6 +16,7 @@ import { AppState, InternalStateType } from './app.service';
 // Core providers
 import {CoreModule} from './core/core.module';
 import {SmartadminLayoutModule} from './shared/layout/layout.module';
+import { AuthenticationGuard } from './authentication.guard';
 
 
 // Application wide providers
@@ -53,7 +54,8 @@ type StoreType = {
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
     // ENV_PROVIDERS,
-    APP_PROVIDERS
+    APP_PROVIDERS,
+    AuthenticationGuard
   ]
 })
 export class AppModule {

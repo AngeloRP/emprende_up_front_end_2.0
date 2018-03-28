@@ -162,9 +162,8 @@ export class NavigationComponent implements OnInit, AfterContentChecked {
   }
 
   refreshEvaluacionService() {
-    this.mesesService = new ApiService(this.http);
-    this.mesesService.fillApiService('obtenerStartUpConMesActivado/' + window.localStorage.getItem('start-up-id'),
-      null);
+    // this.mesesService = new ApiService(this.http);
+    // this.mesesService.fillApiService('obtenerStartUpConMesActivado/' + window.localStorage.getItem('start-up-id'),null);
     /*
     this.evaluacionesService = new ApiService(this.http);
     this.evaluacionesService.fillApiService('obtenerStartUpConMesActivado/' + window.localStorage.getItem('start-up-id'),

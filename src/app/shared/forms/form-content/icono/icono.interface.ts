@@ -1,3 +1,3 @@
 export interface IconoInterface {
-    clase: string;
+    clase: string | '';
 }

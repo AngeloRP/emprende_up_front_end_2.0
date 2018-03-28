@@ -1,5 +1,5 @@
 import { Input } from '@angular/core';
-import { FieldsetInterface } from './section.interface';
+import { FieldsetInterface } from './fieldset.interface';
 export class Fieldset {
-    @Input() section: FieldsetInterface;
+    @Input() fieldset: FieldsetInterface;
 }

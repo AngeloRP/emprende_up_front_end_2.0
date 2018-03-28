@@ -10,6 +10,8 @@ import { InputLabelInterface } from './input_label.interface';
 export class InputClass extends InputClassContent {
     @Input() imagen: IconoInterface;
     @Input() label: InputLabelInterface;
+    @Input() clase: string;
+    @Input() id: string;
     constructor() {
         super();
     }

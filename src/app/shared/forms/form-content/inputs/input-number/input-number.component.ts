@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { InputClassContentPadre } from '../input-content-padre.class';
 /**
- * 
- * 
  * @export
  * @class InputNumberComponent
  * @extends {InputClassContentPadre}
@@ -22,8 +20,6 @@ constructor() {
     super();
   }
 /**
- * 
- * 
  * @memberof InputNumberComponent
  */
 ngOnInit() {

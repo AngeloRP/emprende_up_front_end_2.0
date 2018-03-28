@@ -22,6 +22,7 @@ import {UtilsModule} from './utils/utils.module';
 import {SmartProgressbarModule} from './ui/smart-progressbar/smart-progressbar.module';
 import { SmartadminFormsModule } from './forms/smartadmin-forms.module';
 import { LoadingComponent } from './loading/loading.component';
+import { TableModule } from './table/table.module';
 
 
 @NgModule({
@@ -36,12 +37,19 @@ import { LoadingComponent } from './loading/loading.component';
     CommonModule, FormsModule, HttpModule, RouterModule,
     ModalModule,
     ButtonsModule,
+
+    AlertModule,
+    TabsModule,
+    TooltipModule,
+    BsDropdownModule,
+    ProgressbarModule,
+
     PopoverModule,
-    SmartadminLayoutModule,
     UtilsModule,
     SmartProgressbarModule,
     SmartadminWidgetsModule,
-    SmartadminFormsModule
+    SmartadminFormsModule,
+    TableModule
   ]
 })
 export class SmartadminModule {}

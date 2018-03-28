@@ -17,3 +17,21 @@
  * - BODY
  * - CUSTOM STYLES
  */
+
+input.invalid {
+    background: #fff0f0 !important;
+    border-color: #A90329 !important;
+}
+
+input {
+    border-radius: 6px;
+}
+
+em.invalid {
+    color:rgb(236, 45, 90);
+}
+
+.centrarHorizontalmente{
+    margin-left: auto;
+    margin-right: auto;
+}

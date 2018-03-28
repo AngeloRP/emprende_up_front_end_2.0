@@ -1,12 +1,28 @@
-<section id="{{section.id}}" class="{{section.clase}}">
+<fieldset *ngIf="fieldset.id !== ''" id="{{fieldset.id}}" class="{{fieldset.clase}}">
   <!-- Se le puede agregar legend como si fuera un subtitulo -->
+  <legend *ngIf="fieldset.hasLegend">{{fieldset.legend}}</legend>
   <app-input 
-  *ngFor="let input of section.inputs"
+  *ngFor="let input of fieldset.inputs"
   [data]="input.data"
   [type]="input.type"
   [options]="input.options"
   [label]="input.label"
+  [clase]="input.clase"
+  [id]="input.id"
   >
   </app-input>
 
-</section>
+</fieldset>
+<fieldset *ngIf="fieldset.id === ''" class="{{fieldset.clase}}">
+    <!-- Se le puede agregar legend como si fuera un subtitulo -->
+    <legend *ngIf="fieldset.hasLegend">{{fieldset.legend}}</legend>
+    <app-input 
+    *ngFor="let input of fieldset.inputs"
+    [data]="input.data"
+    [type]="input.type"
+    [options]="input.options"
+    [label]="input.label"
+    >
+    </app-input>
+  
+  </fieldset>

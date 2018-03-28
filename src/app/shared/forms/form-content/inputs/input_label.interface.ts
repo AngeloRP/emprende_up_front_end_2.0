@@ -1,4 +1,4 @@
 export interface InputLabelInterface {
-    hasLabel: boolean;
-    texto: string;
+    hasLabel: boolean | false;
+    texto: string | '';
 }

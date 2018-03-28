@@ -31,6 +31,7 @@ import { InputContentComponent } from './form-content/inputs/input-content/input
 import { FieldsetComponent } from './form-content/fieldset/fieldset.component';
 import { HeaderComponent } from './form-content/header/header.component';
 import { FooterComponent } from './form-content/footer/footer.component';
+import { FormComponent } from './form/form.component';
 
 
 
@@ -61,10 +62,10 @@ import { FooterComponent } from './form-content/footer/footer.component';
     InputContentComponent,
     FieldsetComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    FormComponent
   ],
   exports: [
-    FormsModule,
     SmartadminValidationModule,
     SmartadminWizardsModule,
     ButtonEliminarComponent,
@@ -91,7 +92,8 @@ import { FooterComponent } from './form-content/footer/footer.component';
     InputContentComponent,
     FieldsetComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    FormComponent
   ]
 
 })

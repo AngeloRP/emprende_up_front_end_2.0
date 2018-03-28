@@ -16,10 +16,10 @@
 export interface InputInterface {
     isRequired: boolean | true;
     hasPlaceholder: boolean | true;
-    id: string;
-    value: any;
-    class: string;
-    alt: string;
+    id: string | '';
+    value: any | '';
+    class: string | '';
+    alt: string | '';
     isSeteable: boolean | true;
-    placeholder: string;
+    placeholder: string | '';
 }

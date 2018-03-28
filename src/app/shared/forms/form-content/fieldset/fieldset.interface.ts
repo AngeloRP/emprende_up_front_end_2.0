@@ -6,14 +6,18 @@ import { InputLabelInterface } from '../inputs/input_label.interface';
 
 export interface FieldsetInput {
     imagen: IconoInterface,
-    type: TypeInput,
+    type: TypeInput | 'text',
     data: InputInterface,
     options: InputOptions,
-    label: InputLabelInterface
+    label: InputLabelInterface,
+    clase: string | '',
+    id: string | ''
 }
 
 export interface FieldsetInterface {
     inputs: FieldsetInput[];
-    clase: string;
-    id: string;
+    hasLegend: boolean | false;
+    legend: string | '';
+    clase: string | '';
+    id: string | '';
 }

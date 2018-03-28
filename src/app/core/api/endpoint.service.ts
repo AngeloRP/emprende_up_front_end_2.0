@@ -9,9 +9,7 @@ import { WebAddress } from './web-address';
 
 @Injectable()
 export class EndpointService {
-
-  public webAddress: WebAddress;
-    results: any;
+    public webAddress: WebAddress;
     constructor(public http: Http, url: string, headers: Headers) {
         this.webAddress = new WebAddress(url, headers);
     }

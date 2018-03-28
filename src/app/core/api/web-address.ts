@@ -17,11 +17,17 @@ export class WebAddress {
 
     }
 
-    addHeader(header: { name, value }) {
+    private addHeader(header: { name, value }) {
         if (this.headers.has(header.name)) {
             this.headers.delete(header.name);
         }
         this.headers.append(header.name, header.value);
+    }
+
+    addHeaders(headers: { name, value }[]) {
+        for (let header of headers) {
+            this.addHeader(header);
+        }
     }
 
     addQueryParams(query: { name, value }) {
