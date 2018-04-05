@@ -2,8 +2,6 @@ import { NgModule, ApplicationRef } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { HttpClientModule  } from '@angular/common/http';
-
 /*
  * Platform and Environment providers/directives/pipes
  */
@@ -17,6 +15,7 @@ import { AppState, InternalStateType } from './app.service';
 import {CoreModule} from './core/core.module';
 import {SmartadminLayoutModule} from './shared/layout/layout.module';
 import { AuthenticationGuard } from './authentication.guard';
+import { HttpModule } from '@angular/http';
 
 
 // Application wide providers
@@ -42,7 +41,7 @@ type StoreType = {
   imports: [ // import Angular's modules
     BrowserModule,
     BrowserAnimationsModule,
-    HttpClientModule,
+    HttpModule,
     CoreModule,
     SmartadminLayoutModule,
 

@@ -25,7 +25,7 @@ export class WebAddress {
     }
 
     addHeaders(headers: { name, value }[]) {
-        for (let header of headers) {
+        for (const header of headers) {
             this.addHeader(header);
         }
     }

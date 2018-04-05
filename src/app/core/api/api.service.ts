@@ -16,7 +16,7 @@ export class ApiService extends EndpointService {
     this.webAddress.addHeaders(headers);
   }
 
-  getData(mostrarAlertaSuccess: boolean = false, mostrarAlertaError: boolean = true) {
+  protected getData(mostrarAlertaSuccess: boolean = false, mostrarAlertaError: boolean = true) {
     const resultado = this.get().toPromise().then(
       resultados => {
         if (resultados.data !== undefined) {
@@ -74,7 +74,7 @@ export class ApiService extends EndpointService {
     return resultado;
   }
 
-  postData(body: any, mostrarAlertaSuccess: boolean = false, mostrarAlertaError: boolean = true) {
+  protected postData(body: any, mostrarAlertaSuccess: boolean = false, mostrarAlertaError: boolean = true) {
     const resultado = this.post(body).toPromise().then(
       resultados => {
         if (resultados.data !== undefined) {
@@ -132,7 +132,7 @@ export class ApiService extends EndpointService {
     return resultado;
   }
 
-  patchData(body: any, mostrarAlertaSuccess: boolean = false, mostrarAlertaError: boolean = true) {
+  protected patchData(body: any, mostrarAlertaSuccess: boolean = false, mostrarAlertaError: boolean = true) {
     const resultado = this.patch(body).toPromise().then(
       resultados => {
         if (resultados.data !== undefined) {

@@ -6,16 +6,18 @@ import { SwitchComponent } from './switch/switch.component';
 import { FilterComponent } from './filter/filter.component';
 import { HeadersComponent } from './headers/headers.component';
 import { RowsComponent } from './rows/rows.component';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    NgxDatatableModule
   ],
   declarations: [
     TableComponent, TableContentComponent, SwitchComponent, FilterComponent, HeadersComponent, RowsComponent
   ],
   exports: [
-    TableComponent, TableContentComponent, SwitchComponent, FilterComponent, HeadersComponent, RowsComponent
+    TableComponent
   ]
 })
 export class TableModule { }

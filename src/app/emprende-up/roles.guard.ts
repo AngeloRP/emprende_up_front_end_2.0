@@ -15,6 +15,8 @@ export class RolesGuard implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
     const roles = (next.data && next.data.roles) || [];
+    const rolStorage = window.localStorage.getItem('category');
+
     if (roles.length === 0) {
       console.log('Rol no existe');
       this.router.navigate(['/auth']);
@@ -22,10 +24,15 @@ export class RolesGuard implements CanActivate {
     }
 
     for (const rol of roles) {
-      if (rol === window.localStorage.getItem('category')) {
+      console.log('Rol:' + ROLES[rol]);
+      console.log('Rol en storage:' + rolStorage);
+      if (ROLES[rol] === rolStorage) {
+        console.log('Entro a uno de los roles');
         return true;
       }
     }
+    console.log('Rol actual:' + ROLES[rolStorage]);
+    console.log('No entro a ningun rol redireccionando a login');
     this.router.navigate(['/auth']);
     return false;
   }

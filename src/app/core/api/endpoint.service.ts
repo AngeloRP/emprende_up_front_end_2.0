@@ -14,7 +14,7 @@ export class EndpointService {
         this.webAddress = new WebAddress(url, headers);
     }
 
-    get(): Observable<any> {
+    protected get(): Observable<any> {
         /*return this.http.get(this.webAddress.getUrl(), { headers: this.webAddress.getHeaders() })
           .toPromise()
           .then(
@@ -30,7 +30,7 @@ export class EndpointService {
             .catch(config_server.handleError);
     }
 
-    post(body: any): Observable<any> {
+    protected post(body: any): Observable<any> {
        // console.log('Post body:' + JSON.stringify(body));
 
         return this.http.post(
@@ -43,7 +43,7 @@ export class EndpointService {
             .catch(config_server.handleError);
     }
 
-    patch(body: any): Observable<any> {
+    protected patch(body: any): Observable<any> {
         return this.http.patch(
             this.webAddress.getUrl(),
             JSON.stringify(body),
@@ -54,7 +54,7 @@ export class EndpointService {
             .catch(config_server.handleError);
     }
 
-    put(body: any): Observable<any> {
+    protected put(body: any): Observable<any> {
         return this.http.put(
             this.webAddress.getUrl(),
             JSON.stringify(body),

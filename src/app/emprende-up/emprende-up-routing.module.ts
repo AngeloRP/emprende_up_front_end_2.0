@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { RolesGuard } from './roles.guard';
 let siguiente = 'administrador';
-
+console.log('Siguiente:' + siguiente);
 if (window.localStorage.getItem('category') !== undefined) {
   if (window.localStorage.getItem('category') != null) {
     if (window.localStorage.getItem('category') !== '') {
@@ -24,20 +24,20 @@ const routes: Routes = [
   {
     path: 'administrador',
     data: { pageTitle: 'Perfil del Administrador', roles: ['administrador'] },
-    loadChildren: 'app/emprende-up/administrador/administrador.module#AdministradorModule',
-    canActivate: [ RolesGuard ]
+    loadChildren: './administrador/administrador.module#AdministradorModule',
+    canActivate: [RolesGuard]
   },
   {
     path: 'evaluador',
     data: { pageTitle: 'Perfil del Evaluador', roles: ['evaluador'] },
-    loadChildren: 'app/emprende-up/evaluador/evaluador.module#EvaluadorModule',
-    canActivate: [ RolesGuard ]
+    loadChildren: './evaluador/evaluador.module#EvaluadorModule',
+    canActivate: [RolesGuard]
   },
   {
     path: 'incubado',
     data: { pageTitle: 'Perfil del Incubado', roles: ['incubado'] },
-    loadChildren: 'app/emprende-up/incubado/incubado.module#IncubadoModule',
-    canActivate: [ RolesGuard ]
+    loadChildren: './incubado/incubado.module#IncubadoModule',
+    canActivate: [RolesGuard]
   }
 ];
 

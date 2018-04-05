@@ -10,6 +10,7 @@ export class AuthenticationGuard implements CanActivate {
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
     if (window.localStorage.getItem('category') !== undefined) {
       const category = window.localStorage.getItem('category');
+      console.log('Category:' + category);
       if (category !== 'undefined') {
         if (category != null) {
           if (
@@ -22,6 +23,7 @@ export class AuthenticationGuard implements CanActivate {
         }
       }
     } else {
+      console.log('Redireccionando a authentication');
       this.router.navigate(['/auth']);
       return false;
     }

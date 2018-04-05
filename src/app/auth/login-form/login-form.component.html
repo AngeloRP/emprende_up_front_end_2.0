@@ -1,0 +1,9 @@
+<form id="login" class="smart-form" (submit)="submitForm($event)" [saUiValidate] novalidate="novalidate" style="display:grid">
+  <app-fieldset *ngFor="let fieldset of fieldsets" [fieldset]="fieldset">
+  </app-fieldset>
+  <footer>
+    <button type="submit" class="btn btn-primary submitButton" [disabled]="loading">
+      Aceptar
+    </button>
+  </footer>
+</form>

@@ -8,6 +8,7 @@ import {NavigationComponent} from './navigation.component';
 import {SmartMenuDirective} from './smart-menu.directive';
 import {UserModule} from '../../user/user.module';
 import {RouterModule} from '@angular/router';
+import { NavigationOptionsListComponent } from './navigation-options-list/navigation-options-list.component';
 
 @NgModule({
   imports: [
@@ -21,6 +22,7 @@ import {RouterModule} from '@angular/router';
     MinifyMenuComponent,
     NavigationComponent,
     SmartMenuDirective,
+    NavigationOptionsListComponent
   ],
   exports: [
     BigBreadcrumbsComponent,

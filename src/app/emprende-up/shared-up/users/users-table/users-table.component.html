@@ -1,0 +1,4 @@
+<app-table *ngIf="loading === false" [rows]="rows" [columns]="columns"></app-table>
+<div *ngIf="loading === true">
+    <app-loading-onda></app-loading-onda>
+</div>

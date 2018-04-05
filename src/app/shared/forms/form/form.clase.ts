@@ -2,13 +2,26 @@ import { FormInterface } from './form.interface';
 import { ResponseJson } from '../../response_json';
 import { RequestJson } from '../../request_json';
 import { InterfacesBackRequest } from '../../interfaces_back_request.enum';
-export class Form {
+import { FieldsetInterface } from '../form-content/fieldset/fieldset.interface';
+export class Form implements FormInterface {
     loading: boolean;
-    form: FormInterface;
+    fieldsets: FieldsetInterface[];
+    clase: string | '';
+    id: string | '';
     requestJson: any = {};
     responseJson: any = {};
     constructor() {
         this.loading = false;
+    }
+
+    constructorFormulario(
+        id: string,
+        clase: string,
+        fieldsets: FieldsetInterface[]
+    ) {
+        this.id = id;
+        this.clase = clase;
+        this.fieldsets = fieldsets;
     }
 
     protected submitForm(event) {
@@ -18,8 +31,8 @@ export class Form {
     }
 
     protected generarResponse() {
-        for (let index = 0; index < this.form.fieldsets.length; index++) {
-            const fieldset = this.form.fieldsets[index];
+        for (let index = 0; index < this.fieldsets.length; index++) {
+            const fieldset = this.fieldsets[index];
             for (let index2 = 0; index2 < fieldset.inputs.length; index2++) {
                 const input = fieldset.inputs[index2];
                 // console.log('Input:' + JSON.stringify(input));
@@ -28,7 +41,7 @@ export class Form {
                 }
             }
         }
-       // console.log('Request Json:' + JSON.stringify(this.requestJson));
+        // console.log('Request Json:' + JSON.stringify(this.requestJson));
         this.requestBack();
     }
 

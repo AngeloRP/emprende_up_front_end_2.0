@@ -4,17 +4,13 @@
       <div class="col-xs-12 col-sm-8 col-md-8 col-lg-5 centrarHorizontalmente">
         <div style="display:grid">
             <img class="login_img" src="../../../assets/img/emprende-up/logo_side_bar.png"/>
-          <form id="login" class="smart-form" (submit)="submitForm($event)" [saUiValidate] novalidate="novalidate" style="display:grid">
-            <app-fieldset *ngFor="let fieldset of form.fieldsets" [fieldset]="fieldset">
-            </app-fieldset>
-            <footer>
-              <button type="submit" class="btn btn-primary submitButton" [disabled]="loading">
-                Aceptar
-              </button>
-            </footer>
-          </form>
+            <app-login-form></app-login-form>
         </div>
       </div>
     </div>
   </div>
+</div>
+
+<div id="login_loading" *ngIf="loading">
+    <app-loading-onda></app-loading-onda>
 </div>

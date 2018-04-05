@@ -1,7 +1,6 @@
 import {NgModule, ModuleWithProviders} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
-import {HttpModule} from '@angular/http';
 import {RouterModule} from '@angular/router';
 
 
@@ -21,8 +20,10 @@ import {SmartadminWidgetsModule} from './widgets/smartadmin-widgets.module';
 import {UtilsModule} from './utils/utils.module';
 import {SmartProgressbarModule} from './ui/smart-progressbar/smart-progressbar.module';
 import { SmartadminFormsModule } from './forms/smartadmin-forms.module';
-import { LoadingComponent } from './loading/loading.component';
 import { TableModule } from './table/table.module';
+import { BrowserModule } from '@angular/platform-browser';
+import { LoadingsModule } from './loadings/loadings.module';
+import { HttpModule } from '@angular/http';
 
 
 @NgModule({
@@ -30,14 +31,12 @@ import { TableModule } from './table/table.module';
     CommonModule, FormsModule, HttpModule, RouterModule
   ],
   declarations: [
-  LoadingComponent
   ],
   exports: [
-    LoadingComponent,
     CommonModule, FormsModule, HttpModule, RouterModule,
     ModalModule,
     ButtonsModule,
-
+    LoadingsModule,
     AlertModule,
     TabsModule,
     TooltipModule,
