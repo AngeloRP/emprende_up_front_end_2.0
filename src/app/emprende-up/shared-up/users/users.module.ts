@@ -7,6 +7,7 @@ import { UserComponent } from './user/user.component';
 import { LoadingsModule } from '../../../shared/loadings/loadings.module';
 import { UsersTableInactiveComponent } from './users-table-inactive/users-table-inactive.component';
 import { UserInactiveComponent } from './user-inactive/user-inactive.component';
+import { UsersTableInactiveService } from './users-table-inactive/users-table-inactive.service';
 
 @NgModule({
   imports: [
@@ -25,7 +26,8 @@ import { UserInactiveComponent } from './user-inactive/user-inactive.component';
     UsersTableInactiveComponent
   ],
   providers: [
-    UsersTableService
+    UsersTableService,
+    UsersTableInactiveService
   ]
 })
 export class UsersModule { }

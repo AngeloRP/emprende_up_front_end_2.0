@@ -1,0 +1,8 @@
+.inactive_sort {
+    pointer-events: none;
+    background-color: red;
+}
+
+.ngx-datatable div .datatable-header div div .datatable-header-cell:first-child {
+    pointer-events: none;
+}

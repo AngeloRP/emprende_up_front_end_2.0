@@ -1,0 +1,17 @@
+<!--<p>
+  column works!
+</p>-->
+<ng-template #template ngx-datatable-cell-template let-rowIndex="rowIndex" let-value="value" let-row="row">
+  <div *ngIf="row[column.prop] != null">
+    <p>{{row[column.prop]}}</p>
+  </div>
+  <div *ngIf="row[column.prop] == null">
+    <p>--</p>
+  </div>
+</ng-template>
+
+
+<!--<ng-template #template let-column="column" >
+  <p>tazdingooo</p>
+</ng-template>
+<p>oh thiiii</p>-->

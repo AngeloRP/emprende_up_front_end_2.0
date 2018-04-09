@@ -14,6 +14,7 @@ if (window.localStorage.getItem('category') !== undefined) {
     }
   }
 }
+console.log('Redireccionando a ' + siguiente);
 
 const routes: Routes = [
   {

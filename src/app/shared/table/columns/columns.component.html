@@ -1,0 +1,20 @@
+<!--<p>
+  columns works!
+</p>-->
+<!--<ngx-datatable-column *ngFor="let column of columns;let i of index" name="{{column.prop}}">
+  <app-column  *ngIf="column.tipo == undefined" [column]="column" [rows]="rows"></app-column>
+  <ng-container *ngIf="column.tipo != undefined">
+    <app-column-actions *ngIf="column.tipo == 'action'" [column]="column" [rows]="rows"></app-column-actions>
+  </ng-container>
+</ngx-datatable-column> -->
+
+<ng-container *ngFor="let column of columns;let i of index">
+  <ngx-datatable-column *ngIf="column.tipo == undefined" name="{{column.prop}}" >
+    <app-column [column]="column" [rows]="rows"></app-column>
+  </ngx-datatable-column>
+  <ng-container *ngIf="column.tipo != undefined">
+    <ngx-datatable-column *ngIf="column.tipo == 'action'"  name="{{column.prop}}" >
+      <app-column-actions [column]="column" [rows]="rows"></app-column-actions>
+    </ngx-datatable-column>
+  </ng-container>
+</ng-container>

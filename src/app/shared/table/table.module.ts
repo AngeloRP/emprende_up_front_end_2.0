@@ -7,6 +7,9 @@ import { FilterComponent } from './filter/filter.component';
 import { HeadersComponent } from './headers/headers.component';
 import { RowsComponent } from './rows/rows.component';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { ColumnsComponent } from './columns/columns.component';
+import { ColumnComponent } from './column/column.component';
+import { ColumnActionsComponent } from './column-actions/column-actions.component';
 
 @NgModule({
   imports: [
@@ -14,7 +17,15 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
     NgxDatatableModule
   ],
   declarations: [
-    TableComponent, TableContentComponent, SwitchComponent, FilterComponent, HeadersComponent, RowsComponent
+    TableComponent,
+    TableContentComponent,
+    SwitchComponent,
+    FilterComponent,
+    HeadersComponent,
+    RowsComponent,
+    ColumnComponent,
+    ColumnsComponent,
+    ColumnActionsComponent
   ],
   exports: [
     TableComponent

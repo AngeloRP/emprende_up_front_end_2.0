@@ -1,11 +1,42 @@
-
-<ngx-datatable
-class='material striped'
+        <ngx-datatable *ngIf="loading === false"
+        #table
+        class="material ngx-datatable fixed-header"
         [rows]='rows'
         [columns]='columns'
         [columnMode]='"force"'
-        [headerHeight]='50'
+        [headerHeight]='40'
         [footerHeight]='50'
         [rowHeight]='"auto"'
->
-</ngx-datatable>
+        [reorderable]="false"
+        [loadingIndicator]="loading"
+        [scrollbarH]="true"
+        [cssClasses]="
+        {
+        sortAscending: 'fa fa-caret-up',
+        sortDescending: 'fa fa-caret-down',
+        pagerLeftArrow: 'fa  fa-angle-left',
+        pagerRightArrow: 'fa fa-angle-right',
+        pagerPrevious: 'fa fa-angle-double-left',
+        pagerNext: 'fa fa-angle-double-right'
+        }"
+        >
+                <!--<ngx-datatable-column *ngFor="let column of columns; let i of index" name="{{column.prop}}">
+                <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-value="value" let-row="row">
+                        <div *ngIf="row[column.prop] != null">
+                                <p >{{row[column.prop]}}</p>
+                        </div>
+                        <div *ngIf="row[column.prop] == null">
+                                <p>--</p>
+                        </div>
+                </ng-template>
+                </ngx-datatable-column>-->
+        </ngx-datatable>
+
+       
+        
+        <app-columns 
+        [columns]="columns"
+        [rows]="rows"
+        [posColumnAction]="posColumnAction"
+        >
+        </app-columns>

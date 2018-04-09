@@ -1,6 +1,6 @@
 
 
-import {NgModule} from '@angular/core';
+import {NgModule, ModuleWithProviders} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {BigBreadcrumbsComponent} from './big-breadcrumbs.component';
 import {MinifyMenuComponent} from './minify-menu.component';
@@ -9,6 +9,7 @@ import {SmartMenuDirective} from './smart-menu.directive';
 import {UserModule} from '../../user/user.module';
 import {RouterModule} from '@angular/router';
 import { NavigationOptionsListComponent } from './navigation-options-list/navigation-options-list.component';
+import { NavigationService } from './navigation.service';
 
 @NgModule({
   imports: [
@@ -29,6 +30,9 @@ import { NavigationOptionsListComponent } from './navigation-options-list/naviga
     MinifyMenuComponent,
     NavigationComponent,
     SmartMenuDirective,
+  ],
+  providers: [
+    NavigationService
   ]
 })
 export class NavigationModule {}

@@ -25,6 +25,7 @@ export class Form implements FormInterface {
     }
 
     protected submitForm(event) {
+        event.preventDefault();
         this.loading = true;
         console.log('Event: ' + JSON.stringify(event));
         this.generarResponse();

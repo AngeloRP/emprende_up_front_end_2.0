@@ -12,11 +12,13 @@ headers.append('API-TOKEN', 'ZSSsSfsxtAZ46a8W9dVtCUBvH8vRcOlbHeEAu77X');
 function extraData(res: Response) {
   const body = res.json();
   if (body) {
+    console.log('Entro al Body');
     return {
       headers: res.headers,
       data: body.data || body
     }
   } else {
+    console.log('Retorno Vacio');
     return {}
   }
 }

@@ -12,14 +12,14 @@ export class AuthenticationGuard implements CanActivate {
       const category = window.localStorage.getItem('category');
       console.log('Category:' + category);
       if (category !== 'undefined') {
-        if (category != null) {
-          if (
-            category === '1' ||  // Administrador
-            category === '2' ||  // Evaluador
-            category === '3'     // Incubado
-          ) {
-            return true;
-          }
+        if (category !== null) {
+          return this.redireccionamiento(category);
+        } else if (category !== 'null') {
+          return this.redireccionamiento(category);
+        } else {
+          console.log('Redireccionando a authentication');
+          this.router.navigate(['/auth']);
+          return false;
         }
       }
     } else {
@@ -31,5 +31,20 @@ export class AuthenticationGuard implements CanActivate {
 
   canActivateChild() {
     return true;
+  }
+
+  private redireccionamiento(category: string) {
+    if (
+      category === '1' ||  // Administrador
+      category === '2' ||  // Evaluador
+      category === '3'     // Incubado
+    ) {
+      console.log('Redireccionando a algun rol');
+      return true;
+    } else {
+      console.log('Redireccionando a authentication');
+      this.router.navigate(['/auth']);
+      return false;
+    }
   }
 }

@@ -5,13 +5,15 @@ export class UsersTable extends TableContent {
     constructor() {
         super();
         this.columns = [
+            { prop: 'Operaciones de Usuario', tipo: 'action' },
             { prop: 'Nombre' },
-            { prop: 'Cuenta de usuario'},
-            { prop: 'Género'},
-            { prop: 'Fecha de nacimiento'},
-            { prop: 'Teléfono'},
-            { prop: 'Categoría'},
-            { prop: 'Estado'}
+            { prop: 'Cuenta de usuario' },
+            { prop: 'Género' },
+            { prop: 'Fecha de nacimiento' },
+            { prop: 'Teléfono' },
+            { prop: 'Categoría' },
+            { prop: 'Estado' }
         ]
+        this.posColumnAction = 0;
     }
 }
