@@ -1,4 +1,6 @@
-<app-table *ngIf="loading === false" [rows]="rows" [columns]="columns" [posColumnAction]="posColumnAction"></app-table>
+
+<app-filter *ngIf="loading === false" [idFilter]="'user_table'" (resultado)="capturarResultado($event)"></app-filter>
+<app-table *ngIf="loading === false" [rows]="rows" [columns]="columns" [searColumns]="searColumns" [searValue]="searValue"></app-table>
 <div *ngIf="loading === true">
     <app-loading-onda></app-loading-onda>
 </div>

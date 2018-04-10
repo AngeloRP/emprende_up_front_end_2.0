@@ -5,7 +5,20 @@ export class UsersTable extends TableContent {
     constructor() {
         super();
         this.columns = [
-            { prop: 'Operaciones de Usuario', tipo: 'action' },
+            {
+                prop: 'Operaciones de Usuario',
+                tipo: 'action',
+                internal_buttons: [
+                    {
+                        text: 'Editar Usuario',
+                        class: 'col-xs-4',
+                        icon: 'fa fa-pencil',
+                        action: (data) => {
+                            console.log('Data:' + JSON.stringify(data));
+                        }
+                    }
+                ]
+            },
             { prop: 'Nombre' },
             { prop: 'Cuenta de usuario' },
             { prop: 'Género' },
@@ -13,7 +26,11 @@ export class UsersTable extends TableContent {
             { prop: 'Teléfono' },
             { prop: 'Categoría' },
             { prop: 'Estado' }
-        ]
-        this.posColumnAction = 0;
+        ];
+        this.searColumns = [
+            'Nombre',
+            'Cuenta de usuario',
+            'Categoría'
+        ];
     }
 }

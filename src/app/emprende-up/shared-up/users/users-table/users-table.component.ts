@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { UsersTableService } from './users-table.service';
 import { UsersTable } from './users-table.class';
 
 @Component({
   selector: 'app-users-table',
   templateUrl: './users-table.component.html',
-  styleUrls: ['./users-table.component.css']
+  styleUrls: ['./users-table.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class UsersTableComponent extends UsersTable implements OnInit {
 
@@ -19,6 +20,11 @@ export class UsersTableComponent extends UsersTable implements OnInit {
       this.rows = this.user_service.results;
       this.loading = false;
     });
+  }
+
+  capturarResultado(event){
+    console.log('Resultado Escrito en el filtro:' + event);
+    this.searValue = event;
   }
 
 }

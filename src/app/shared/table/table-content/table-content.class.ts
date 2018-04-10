@@ -3,7 +3,9 @@ import { Content } from '../content.class';
 import { ColumnInterface } from '../column/column.interface';
 export class TableContent extends Content {
     @Input() columns: ColumnInterface[];
-    @Input() posColumnAction: number;
+    @Input() searColumns: string[];
+    @Input() searValue: string;
+    temp = [];
     /**
      * En prop va el nombre del valor de base de datos y en name
      * si es un columna de botones 'action'
@@ -15,4 +17,9 @@ export class TableContent extends Content {
     constructor() {
         super();
     }
+
+    /*updateFilter(event) {
+
+    }*/
+
 }

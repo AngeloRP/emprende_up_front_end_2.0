@@ -2,8 +2,15 @@
   column-actions works!
 </p>-->
 
-  <ng-template #template ngx-datatable-cell-template >
-    <p>oh thiii</p>
+  <ng-template #template ngx-datatable-cell-template let-row="row" let-value="value">
+    <!--<p>oh thiii</p>-->
+    <ng-container *ngIf="column.internal_buttons != undefined"> 
+      <ng-container *ngIf="column.internal_buttons != null">
+        <button *ngFor="let action of column.internal_buttons" md-icon-button (click)="action.action(row)" title="{{action.text}}">
+          <i class="{{action.icon}}"></i>
+        </button>
+      </ng-container>
+    </ng-container>
   </ng-template>
 
 

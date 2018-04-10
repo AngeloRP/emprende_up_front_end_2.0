@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { TableComponent } from './table/table.component';
 import { TableContentComponent } from './table-content/table-content.component';
@@ -14,7 +15,8 @@ import { ColumnActionsComponent } from './column-actions/column-actions.componen
 @NgModule({
   imports: [
     CommonModule,
-    NgxDatatableModule
+    NgxDatatableModule,
+    FormsModule
   ],
   declarations: [
     TableComponent,
@@ -28,7 +30,8 @@ import { ColumnActionsComponent } from './column-actions/column-actions.componen
     ColumnActionsComponent
   ],
   exports: [
-    TableComponent
+    TableComponent,
+    FilterComponent
   ]
 })
 export class TableModule { }

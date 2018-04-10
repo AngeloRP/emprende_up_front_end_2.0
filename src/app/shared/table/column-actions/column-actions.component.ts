@@ -7,7 +7,7 @@ import { Column } from '../column/column.class';
   styleUrls: ['./column-actions.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class ColumnActionsComponent extends Column  implements OnInit {
+export class ColumnActionsComponent extends Column implements OnInit {
   @ViewChild('template') template: TemplateRef<any>;
   constructor() {
     super();
