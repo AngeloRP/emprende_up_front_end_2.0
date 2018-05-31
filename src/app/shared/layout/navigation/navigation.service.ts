@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { ApiService } from '../../../core/api/api.service';
 import { NotificationService } from '../../utils/notification.service';
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 
 
 @Injectable()
 export class NavigationService extends ApiService {
-  constructor(public http: Http, public notificationService: NotificationService) {
+  constructor(public http: HttpClient, public notificationService: NotificationService) {
     super(
       http,
       'obtenerStartUpConMesActivado/' +

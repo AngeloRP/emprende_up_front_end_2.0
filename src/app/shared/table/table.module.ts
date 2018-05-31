@@ -11,6 +11,7 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { ColumnsComponent } from './columns/columns.component';
 import { ColumnComponent } from './column/column.component';
 import { ColumnActionsComponent } from './column-actions/column-actions.component';
+import { TableRewatcherDirective } from './table-content/table-rewatcher.directive';
 
 @NgModule({
   imports: [
@@ -27,7 +28,8 @@ import { ColumnActionsComponent } from './column-actions/column-actions.componen
     RowsComponent,
     ColumnComponent,
     ColumnsComponent,
-    ColumnActionsComponent
+    ColumnActionsComponent,
+    TableRewatcherDirective
   ],
   exports: [
     TableComponent,

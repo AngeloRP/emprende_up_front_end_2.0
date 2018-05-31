@@ -76,6 +76,7 @@ export class LoginFormComponent extends Form implements OnInit {
   }
 
   ngOnInit() {
+    console.log('Fieldsets:' + this.fieldsets);
   }
 
   requestBack() {

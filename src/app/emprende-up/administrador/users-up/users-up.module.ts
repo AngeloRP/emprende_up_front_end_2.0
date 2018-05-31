@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { UsersUpRoutingModule } from './users-up-routing.module';
 import { UsersUpListComponent } from './users-up-list/users-up-list.component';
 import { LoadingsModule } from '../../../shared/loadings/loadings.module';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { UsersModule } from '../../shared-up/users/users.module';
 
 @NgModule({
@@ -12,7 +12,7 @@ import { UsersModule } from '../../shared-up/users/users.module';
     CommonModule,
     UsersUpRoutingModule,
     LoadingsModule,
-    HttpModule,
+    HttpClientModule,
     UsersModule
   ],
   declarations: [UsersUpListComponent]

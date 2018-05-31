@@ -1,8 +1,9 @@
-import { Headers, Response } from '@angular/http';
+import { Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
+import { HttpHeaders } from '@angular/common/http';
 
 // Uso de Tokens
-const headers = new Headers(
+const headers = new HttpHeaders(
   { 'Content-Type': 'application/json' }
 );
 headers.append('Access-Control-Allow-Origin', '*');
@@ -41,17 +42,17 @@ function handleError(error) {
     }];
     // manejoError(obj);
     return Observable.throw(errMsg);*/
-    return Observable.throw(error.json().error || 'Server error');
+  return Observable.throw(error.json().error || 'Server error');
 }
 
 
 function manejoError(error) {
- // console.log('Error');
- // console.log(error);
+  // console.log('Error');
+  // console.log(error);
   if (error[0].status === 422) {
     const injson = Object.keys(error[0].body);
     let err = 'Acción invalida: \n';
-    for (let x of injson) {
+    for (const x of injson) {
       err = err + error[0].body[x][0] + '\n';
     }
     alert(err);

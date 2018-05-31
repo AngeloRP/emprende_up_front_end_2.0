@@ -20,6 +20,7 @@ export class LoginComponent implements OnInit, AfterContentChecked {
   }
 
   ngOnInit() {
+    console.log('Entro a Login');
     window.localStorage.clear();
   }
 

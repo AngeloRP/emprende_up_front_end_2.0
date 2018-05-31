@@ -3,12 +3,12 @@ import { CommonModule } from '@angular/common';
 
 import { EmprendeUpRoutingModule } from './emprende-up-routing.module';
 import { RolesGuard } from './roles.guard';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
     CommonModule,
-    HttpModule,
+    HttpClientModule,
     EmprendeUpRoutingModule
   ],
   declarations: [],

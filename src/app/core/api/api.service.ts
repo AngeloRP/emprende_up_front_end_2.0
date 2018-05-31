@@ -1,16 +1,22 @@
 import { Injectable } from '@angular/core';
-import { Http, Response, Headers } from '@angular/http';
+import { Response, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { config_server } from './config';
 import { EndpointService } from './endpoint.service';
 import { NotificationService } from 'app/shared/utils/notification.service';
 import * as  conexion_back from 'assets/api/back/url.json'
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class ApiService extends EndpointService {
   results: any;
-  constructor(public http: Http, public url: string, public headers: { name, value }[], public notificationService: NotificationService) {
+  constructor(
+    public http: HttpClient,
+    public url: string,
+    public headers: { name, value }[],
+    public notificationService: NotificationService
+  ) {
     super(http, conexion_back.url, config_server.headers);
     this.webAddress.addUrl(url);
     this.webAddress.addHeaders(headers);

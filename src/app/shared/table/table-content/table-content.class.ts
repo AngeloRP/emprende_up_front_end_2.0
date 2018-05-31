@@ -5,6 +5,9 @@ export class TableContent extends Content {
     @Input() columns: ColumnInterface[];
     @Input() searColumns: string[];
     @Input() searValue: string;
+    @Input() pageSize: number | 10;
+    @Input() idTable: string | '';
+    @Input() pageNumber: number | 0;
     temp = [];
     /**
      * En prop va el nombre del valor de base de datos y en name

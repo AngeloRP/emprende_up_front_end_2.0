@@ -5,15 +5,17 @@ import { LoginComponent } from './login/login.component';
 import { LoginService } from './login/login.service';
 import { SmartadminFormsModule } from '../shared/forms/smartadmin-forms.module';
 import { UtilsModule } from '../shared/utils/utils.module';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { LoadingsModule } from '../shared/loadings/loadings.module';
 import { LoginFormComponent } from './login-form/login-form.component';
+import { FieldsetModule } from '../shared/forms/form-content/fieldset/fieldset.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    HttpModule,
+    HttpClientModule,
+    FieldsetModule,
     SmartadminFormsModule,
     RouterModule,
     AuthRoutingModule,

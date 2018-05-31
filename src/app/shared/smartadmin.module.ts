@@ -23,17 +23,17 @@ import { SmartadminFormsModule } from './forms/smartadmin-forms.module';
 import { TableModule } from './table/table.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { LoadingsModule } from './loadings/loadings.module';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
   imports: [
-    CommonModule, FormsModule, HttpModule, RouterModule
+    CommonModule, FormsModule, HttpClientModule, RouterModule
   ],
   declarations: [
   ],
   exports: [
-    CommonModule, FormsModule, HttpModule, RouterModule,
+    CommonModule, FormsModule, HttpClientModule, RouterModule,
     ModalModule,
     ButtonsModule,
     LoadingsModule,

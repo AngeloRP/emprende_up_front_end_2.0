@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChildren, QueryList, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ViewChildren, QueryList, AfterViewInit, ViewEncapsulation } from '@angular/core';
 import { TableContent } from '../table-content/table-content.class';
 import { ColumnComponent } from '../column/column.component';
 import { ColumnActionsComponent } from '../column-actions/column-actions.component';
@@ -6,7 +6,8 @@ import { ColumnActionsComponent } from '../column-actions/column-actions.compone
 @Component({
   selector: 'app-columns',
   templateUrl: './columns.component.html',
-  styleUrls: ['./columns.component.css']
+  styleUrls: ['./columns.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class ColumnsComponent extends TableContent implements OnInit, AfterViewInit {
   @ViewChildren(ColumnComponent) columnChildren: QueryList<ColumnComponent>;

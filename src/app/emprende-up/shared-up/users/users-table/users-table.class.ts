@@ -8,6 +8,7 @@ export class UsersTable extends TableContent {
             {
                 prop: 'Operaciones de Usuario',
                 tipo: 'action',
+                widthText: 180,
                 internal_buttons: [
                     {
                         text: 'Editar Usuario',
@@ -19,13 +20,13 @@ export class UsersTable extends TableContent {
                     }
                 ]
             },
-            { prop: 'Nombre' },
-            { prop: 'Cuenta de usuario' },
-            { prop: 'Género' },
-            { prop: 'Fecha de nacimiento' },
-            { prop: 'Teléfono' },
-            { prop: 'Categoría' },
-            { prop: 'Estado' }
+            { prop: 'Cuenta de usuario', widthText: 180 },
+            { prop: 'Nombre', widthText: 100 },
+            { prop: 'Paso', widthText: 90 },
+            { prop: 'Género', widthText: 100 },
+            { prop: 'Fecha de nacimiento', widthText: 180 },
+            { prop: 'Teléfono', widthText: 120 },
+            { prop: 'Categoría', widthText: 125 }
         ];
         this.searColumns = [
             'Nombre',

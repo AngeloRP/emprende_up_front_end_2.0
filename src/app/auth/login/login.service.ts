@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import { NotificationService } from '../../shared/utils/notification.service';
 import * as  conexion_back from 'assets/api/back/url.json';
 import { config_server } from '../../core/api/config';
@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 @Injectable()
 export class LoginService extends ApiService {
   results: LoginInterfaceResponse;
-  constructor(public http: Http, public notificationService: NotificationService, private router: Router) {
+  constructor(public http: HttpClient, public notificationService: NotificationService, private router: Router) {
     super(http, 'loginUsuario', [], notificationService);
   }
 

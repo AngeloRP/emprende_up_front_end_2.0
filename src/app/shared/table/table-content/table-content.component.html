@@ -1,15 +1,16 @@
-        <ngx-datatable *ngIf="loading === false"
+        <ngx-datatable
         #table
         class="material ngx-datatable fixed-header"
         [rows]='rows'
         [columns]='columns'
-        [columnMode]='"force"'
+        [columnMode]="'force'"
         [headerHeight]='40'
         [footerHeight]='50'
         [rowHeight]='"auto"'
         [reorderable]="false"
         [loadingIndicator]="loading"
         [scrollbarH]="true"
+        [limit]="pageSize"
         [cssClasses]="
         {
         sortAscending: 'fa fa-caret-up',
@@ -20,16 +21,6 @@
         pagerNext: 'fa fa-angle-double-right'
         }"
         >
-                <!--<ngx-datatable-column *ngFor="let column of columns; let i of index" name="{{column.prop}}">
-                <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-value="value" let-row="row">
-                        <div *ngIf="row[column.prop] != null">
-                                <p >{{row[column.prop]}}</p>
-                        </div>
-                        <div *ngIf="row[column.prop] == null">
-                                <p>--</p>
-                        </div>
-                </ng-template>
-                </ngx-datatable-column>-->
         </ngx-datatable>
 
        

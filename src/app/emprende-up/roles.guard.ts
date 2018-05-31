@@ -16,7 +16,7 @@ export class RolesGuard implements CanActivate {
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
     const roles = (next.data && next.data.roles) || [];
     const rolStorage = window.localStorage.getItem('category');
-
+    console.log('ROLES:' + JSON.stringify(roles));
     if (roles.length === 0) {
       console.log('Rol no existe');
       this.router.navigate(['/auth']);

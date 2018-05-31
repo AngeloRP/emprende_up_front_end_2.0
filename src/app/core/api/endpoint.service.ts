@@ -1,16 +1,17 @@
 import { Injectable } from '@angular/core';
-import { Http, Response, Headers } from '@angular/http';
+import { Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { config_server } from './config';
-import 'rxjs/add/operator/map';
+import { map, filter } from 'rxjs/operators';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/toPromise';
 import { WebAddress } from './web-address';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable()
 export class EndpointService {
     public webAddress: WebAddress;
-    constructor(public http: Http, url: string, headers: Headers) {
+    constructor(public http: HttpClient, url: string, headers: HttpHeaders) {
         this.webAddress = new WebAddress(url, headers);
     }
 
@@ -21,13 +22,11 @@ export class EndpointService {
           response => {
            // console.log(response);
             this.results = response;
-            response.json();
+            response.json();ks
           })
           .catch(this.handleError);
           /** */
-        return this.http.get(this.webAddress.getUrl(), { headers: this.webAddress.getHeaders() })
-            .map(config_server.extraData)
-            .catch(config_server.handleError);
+        return this.http.get(this.webAddress.getUrl(), { headers: this.webAddress.getHeaders() });
     }
 
     protected post(body: any): Observable<any> {
@@ -39,8 +38,7 @@ export class EndpointService {
             {
                 headers: this.webAddress.getHeaders()
             },
-        ).map(config_server.extraData)
-            .catch(config_server.handleError);
+        ).catch(config_server.handleError);
     }
 
     protected patch(body: any): Observable<any> {

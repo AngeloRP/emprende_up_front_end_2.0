@@ -12,6 +12,7 @@ export class FieldsetComponent extends Fieldset implements OnInit {
   }
 
   ngOnInit() {
+    console.log('Fieldsets:' + this.fieldset);
   }
 
 }

@@ -6,14 +6,19 @@ export class UsersTableInactive extends TableContent {
     constructor() {
         super();
         this.columns = [
-            { prop: 'Operaciones de Usuario', tipo: 'action' },
-            { prop: 'Nombre', tipo: 'normal-value' },
-            { prop: 'Cuenta de usuario', tipo: 'normal-value' },
-            { prop: 'Género', tipo: 'normal-value' },
-            { prop: 'Fecha de nacimiento', tipo: 'normal-value' },
-            { prop: 'Teléfono', tipo: 'normal-value' },
-            { prop: 'Categoría', tipo: 'normal-value' },
-            { prop: 'Estado', tipo: 'normal-value' }
+            {
+                prop: 'Operaciones de Usuario',
+                flexGrow: 3,
+                tipo: 'action',
+                widthText: 180
+            },
+            { prop: 'Cuenta de usuario', widthText: 180 },
+            { prop: 'Nombre', widthText: 100 },
+            { prop: 'Paso', widthText: 40 },
+            { prop: 'Género', widthText: 96 },
+            { prop: 'Fecha de nacimiento', widthText: 120 },
+            { prop: 'Teléfono', widthText: 100 },
+            { prop: 'Categoría', widthText: 126 }
         ]
     }
 }

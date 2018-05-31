@@ -15,7 +15,7 @@ import { AppState, InternalStateType } from './app.service';
 import {CoreModule} from './core/core.module';
 import {SmartadminLayoutModule} from './shared/layout/layout.module';
 import { AuthenticationGuard } from './authentication.guard';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 
 // Application wide providers
@@ -41,7 +41,7 @@ type StoreType = {
   imports: [ // import Angular's modules
     BrowserModule,
     BrowserAnimationsModule,
-    HttpModule,
+    HttpClientModule,
     CoreModule,
     SmartadminLayoutModule,
 

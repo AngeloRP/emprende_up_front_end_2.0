@@ -3,6 +3,6 @@
     background-color: red;
 }
 
-.ngx-datatable div .datatable-header div div .datatable-header-cell:first-child {
+/*.ngx-datatable div .datatable-header div div .datatable-header-cell > div:first-child {
     pointer-events: none;
-}
+}*/

@@ -1,11 +1,12 @@
-import { Headers } from '@angular/http';
+import { HttpHeaders } from '@angular/common/http';
+
 export class WebAddress {
-    public headers: Headers;
+    public headers: HttpHeaders;
     private urlPath: string;
     private queryParams: any[] = [];
     private formData: any[] = [];
 
-    constructor(url: string, headers: Headers) {
+    constructor(url: string, headers: HttpHeaders) {
         this.urlPath = url;
         this.headers = headers;
     }
@@ -62,13 +63,13 @@ export class WebAddress {
         return this.urlPath;
     }
 
-    public getHeaders(): Headers {
+    public getHeaders(): HttpHeaders {
         return this.headers;
     }
 
-    public getHeaderValues(): string[][] {
+    /*public getHeaderValues(): string[] {
         return this.headers.values();
-    }
+    }*/
 
     public getHeaderKeys(): string[] {
         return this.headers.keys();
